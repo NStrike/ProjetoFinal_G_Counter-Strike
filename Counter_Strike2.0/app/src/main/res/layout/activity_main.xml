@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.counter_strike20.MainActivity">
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/csgo"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/csgo_ct_icon"
+        android:onClick="counter"
+        android:text="CT"
+        android:textColor="#07659e"
+        android:textSize="60sp"
+        android:id="@+id/ct"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/csgo_t_icon"
+        android:onClick="terror"
+        android:text="TR"
+        android:textColor="#d68b13"
+        android:textColorHighlight="#212121"
+        android:textSize="60sp"
+        android:id="@+id/tr"
+        android:layout_alignTop="@id/ct"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3F51B5"
+            android:text="Thunder"
+            android:textSize="20sp"
+            android:layout_marginBottom="31dp"
+            android:id="@+id/thunder"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout"
+            android:checkedButton="@color/radioButton"
+            android:buttonTint="@color/radioButton"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3F51B5"
+            android:text="Nuke"
+            android:textSize="20sp"
+            android:id="@+id/nuke"
+            android:layout_marginLeft="30sp"
+            android:layout_alignTop="@id/thunder"
+            android:layout_toRightOf="@id/ct"
+            android:layout_toEndOf="@id/ct"
+            android:checkedButton="@color/radioButton"
+            android:buttonTint="@color/radioButton"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3F51B5"
+            android:text="Inferno"
+            android:textSize="20sp"
+            android:id="@+id/inferno"
+            android:layout_alignTop="@id/nuke"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:checkedButton="@color/radioButton"
+            android:buttonTint="@color/radioButton"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapas:"
+        android:textColor="#a40606"
+        android:textSize="40sp"
+        android:id="@+id/textView"
+        android:layout_above="@id/radioGroup"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha Seu Lado:"
+        android:textColor="#be0707"
+        android:textSize="40sp"
+        android:id="@+id/textView2"
+        android:layout_marginTop="39dp"
+        android:layout_alignRight="@id/tr"
+        android:layout_alignEnd="@id/tr" />
+</RelativeLayout>
